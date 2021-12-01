@@ -1,4 +1,6 @@
-﻿using AoC2021Core;
+﻿using System;
+using System.Diagnostics;
+using AoC2021Days;
 
 namespace AoC2021Main
 {
@@ -6,7 +8,24 @@ namespace AoC2021Main
     {
         public static void Main(string[] args)
         {
-            var test = ReadInput.ConvertInputTextToIntList(@"..\..\..\..\Inputs\Day01.txt");            
+            var day = new Day01(); // Replace date number here
+
+            Solve(day);
+        }
+
+        private static void Solve(IDay day)
+        {
+            var watch1 = Stopwatch.StartNew();
+            day.SolvePartOne();
+            watch1.Stop();
+
+            var watch2 = Stopwatch.StartNew();
+            day.SolvePartTwo();
+            watch2.Stop();
+
+            Console.WriteLine($"Part One took {watch1.ElapsedMilliseconds} ms");
+            Console.WriteLine($"Part Two took {watch2.ElapsedMilliseconds} ms");
+            Console.ReadLine();
         }
     }
 }
