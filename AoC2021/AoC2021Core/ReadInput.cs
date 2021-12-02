@@ -47,7 +47,7 @@
             return outputList;
         }
 
-        public static List<string> ConvertInputTextToStringList(string path, string[] delimiter)
+        public static List<string> ConvertInputTextToStringList(string path, char delimiter)
         {
             List<string> outputList = new();
 

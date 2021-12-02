@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using AoC2021Days;
 
 namespace AoC2021Main
@@ -8,7 +7,7 @@ namespace AoC2021Main
     {
         public static void Main(string[] args)
         {
-            var day = new Day01(); // Replace date number here
+            var day = new Day02(); // Replace date number here
 
             Solve(day);
         }

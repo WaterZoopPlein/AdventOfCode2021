@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AoC2021Class\AoC2021Class.csproj" />
-    <ProjectReference Include="..\AoC2021Core\AoC2021Core.csproj" />
-  </ItemGroup>
-
 </Project>
