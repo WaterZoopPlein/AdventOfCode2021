@@ -14,7 +14,7 @@ https://adventofcode.com/
 ## Folder structure
 
 **AoC2021** <br>
-├─ **AoC2021Class** - Classes needed to solve each days of AoC
+├─ **AoC2021Class** - Classes needed to solve each days of AoC <br>
 ├─ **AoC2021Core** - Core library of common AoC functions (e.g. text inputs) <br>
 ├─ **AoC2021Days** - Solution codes of each day <br>
 ├─ **AoC2021Main** - Main Program class/ startup project <br>
