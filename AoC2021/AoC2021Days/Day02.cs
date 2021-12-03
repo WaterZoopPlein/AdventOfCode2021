@@ -5,11 +5,11 @@ namespace AoC2021Days
 {
     public class Day02 : IDay
     {
-        private static readonly List<string> InputList = 
+        private static readonly List<string> InputList =
             ReadInput.ConvertInputTextToStringList(@"..\..\..\..\Inputs\Day02.txt", '\n');
 
         private static readonly List<Command> ConvertedInputList =
-            InputList.ConvertAll(x => new Command(x)).ToList();
+            InputList.ConvertAll(x => new Command(x));
 
 
         public void SolvePartOne()

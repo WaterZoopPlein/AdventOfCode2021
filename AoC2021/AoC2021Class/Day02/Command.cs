@@ -6,7 +6,7 @@
         {
             var commandArray = strCommand.Split(' ');
 
-            Direction = Enum.TryParse<Direction>(commandArray[0], true, out var directionOutput) 
+            Direction = Enum.TryParse<Direction>(commandArray[0], true, out var directionOutput)
                 ? directionOutput : Direction.Invalid;
 
             Step = int.TryParse(commandArray[1], out var stepOutput)

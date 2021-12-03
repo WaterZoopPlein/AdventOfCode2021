@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AoC2021Class.Day02
+﻿namespace AoC2021Class.Day02
 {
     public class Position
     {
@@ -15,7 +9,7 @@ namespace AoC2021Class.Day02
             Aim = 0;
         }
 
-        public override string ToString() => string.Format("Hor-{0} Dep-{1} Aim-{2}", 
+        public override string ToString() => string.Format("Hor-{0} Dep-{1} Aim-{2}",
             Horizontal, Depth, Aim);
 
         public void ExecuteCommandNoAim(Command command)

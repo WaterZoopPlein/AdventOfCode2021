@@ -4,7 +4,7 @@
     {
         public static List<int> ConvertInputTextToIntList(string path)
         {
-            List<int> outputList = new ();
+            List<int> outputList = new();
 
             try
             {
