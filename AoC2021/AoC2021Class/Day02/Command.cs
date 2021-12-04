@@ -13,8 +13,8 @@
                 ? stepOutput : -1;
         }
 
-        public Direction Direction { get; set; }
-        public int Step { get; set; }
+        public Direction Direction { get; }
+        public int Step { get; }
         public override string ToString() => string.Format("{0} {1}", Direction, Step);
     }
 }

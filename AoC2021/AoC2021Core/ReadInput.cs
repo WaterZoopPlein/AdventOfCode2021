@@ -47,7 +47,7 @@
             return outputList;
         }
 
-        public static List<string> ConvertInputTextToStringList(string path, char delimiter)
+        public static List<string> ConvertInputTextToStringList(string path, string delimiter)
         {
             List<string> outputList = new();
 
@@ -67,6 +67,18 @@
             }
 
             return outputList;
+        }
+
+        public static IEnumerable<int> ConvertStringToIntList(string str, char delimiter)
+        {
+            if (string.IsNullOrEmpty(str))
+                yield break;
+
+            foreach (var s in str.Split(delimiter))
+            {
+                if (int.TryParse(s, out int num))
+                    yield return num;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ namespace AoC2021Days
     public class Day03 : IDay
     {
         private static readonly List<string> InputList =
-            ReadInput.ConvertInputTextToStringList(@"..\..\..\..\Inputs\Day03.txt", '\n');
+            ReadInput.ConvertInputTextToStringList(@"..\..\..\..\Inputs\Day03.txt", "\n");
         private readonly int binaryLength = InputList[0].Length;
 
         public void SolvePartOne()
