@@ -13,8 +13,8 @@
             boardIdStatic++;
 
             Board = new BingoElement[boardSize, boardSize];
-            RowBingoCount = new int[boardSize];
-            ColumeBingoCount = new int[boardSize];
+            RowDrawnNumberCount = new int[boardSize];
+            ColumeDrawnNumberCount = new int[boardSize];
             IsWinner = false;
             Message = "Board initalised";
             BingoNumber = -1;
@@ -54,8 +54,8 @@
 
                         foundRowNumber = rowNumber;
                         foundColumeNumber = columeNumber;
-                        RowBingoCount[rowNumber]++;
-                        ColumeBingoCount[columeNumber]++;
+                        RowDrawnNumberCount[rowNumber]++;
+                        ColumeDrawnNumberCount[columeNumber]++;
 
                         CheckBingoOnRowAndColume(rowNumber, columeNumber);
                         if (IsWinner) BingoNumber = number;
@@ -90,11 +90,11 @@
             Message = "Board reset.";
             BingoNumber = -1;
 
-            for (int i = 0; i < RowBingoCount.Length; i++)
-                RowBingoCount[i] = 0;
+            for (int i = 0; i < RowDrawnNumberCount.Length; i++)
+                RowDrawnNumberCount[i] = 0;
 
-            for (int j = 0; j < ColumeBingoCount.Length; j++)
-                ColumeBingoCount[j] = 0;
+            for (int j = 0; j < ColumeDrawnNumberCount.Length; j++)
+                ColumeDrawnNumberCount[j] = 0;
         }
 
         private void UpdateMessage(bool found, int foundRowNumber = -1, int foundColumeNumber = -1)
@@ -115,8 +115,8 @@
 
         private void CheckBingoOnRowAndColume(int rowNumber, int columeNumber)
         {
-            if (RowBingoCount[rowNumber] == Board.GetLength(0)
-                | ColumeBingoCount[columeNumber] == Board.GetLength(1))
+            if (RowDrawnNumberCount[rowNumber] == Board.GetLength(0)
+                | ColumeDrawnNumberCount[columeNumber] == Board.GetLength(1))
             {
                 IsWinner = true;
             }
@@ -126,8 +126,8 @@
 
         public int BoardId { get; }
         public BingoElement[,] Board { get; }
-        public int[] RowBingoCount { get; }
-        public int[] ColumeBingoCount { get; }
+        public int[] RowDrawnNumberCount { get; }
+        public int[] ColumeDrawnNumberCount { get; }
         public int BingoNumber { get; set; }
         public bool IsWinner { get; set; }
         public string Message { get; set; }

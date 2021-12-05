@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoC2021Main", "AoC2021Main\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoC2021Days", "AoC2021Days\AoC2021Days.csproj", "{97E2F16B-D27C-42BC-AB0C-613AB594854F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoC2021Class", "AoC2021Class\AoC2021Class.csproj", "{F10097DB-AB2D-40B7-9462-9BFCD1AFCBE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoC2021Class", "AoC2021Class\AoC2021Class.csproj", "{F10097DB-AB2D-40B7-9462-9BFCD1AFCBE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E9636950-8D82-4A9D-A243-1423EB8FA579}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

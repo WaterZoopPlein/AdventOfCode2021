@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AoC2021Class.Day04
+﻿namespace AoC2021Class.Day04
 {
     public class BingoElement
     {
