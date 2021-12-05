@@ -18,4 +18,4 @@ https://adventofcode.com/
 ├─ **AoC2021Core** - Core library of common AoC functions (e.g. text inputs) <br>
 ├─ **AoC2021Days** - Solution codes of each day <br>
 ├─ **AoC2021Main** - Main Program class/ startup project <br>
-├─ **Inputs** - Input text files <br>
+├─ **Inputs** - Input text files. Is kept private. So create the folder and put the DayXX.txt input file in (XX = day number, eg. 01, 02, 10, 25) when cloning the repo <br>
