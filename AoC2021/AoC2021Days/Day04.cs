@@ -12,7 +12,7 @@ namespace AoC2021Days
             InputList.GetRange(1, InputList.Count - 1).ConvertAll(x => new BingoBoard(x));
 
         private static readonly int[] DrawnNumbers =
-            ReadInput.ConvertStringToIntList(InputList[0], ',').ToArray();
+            ReadInput.ConvertStringToIntIEnum(InputList[0], ',').ToArray();
 
         public void SolvePartOne()
         {

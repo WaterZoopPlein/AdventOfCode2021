@@ -69,7 +69,7 @@
             return outputList;
         }
 
-        public static IEnumerable<int> ConvertStringToIntList(string str, char delimiter)
+        public static IEnumerable<int> ConvertStringToIntIEnum(string str, char delimiter)
         {
             if (string.IsNullOrEmpty(str))
                 yield break;
