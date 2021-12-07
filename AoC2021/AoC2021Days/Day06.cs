@@ -25,16 +25,16 @@ namespace AoC2021Days
         {
             List<int> schoolOfFish = ReadInput.ConvertStringToIntIEnum(InputList[0], ',').ToList();
 
-            Dictionary<int, long> fishCountByAgeDictionary = CreateDictionaryFromSchoolOfFish(schoolOfFish);
+            long[] fishCountByAgeArray = CreateArrayFromSchoolOfFish(schoolOfFish);
 
             for (int i = 0; i < 256; i++)
             {
-                long yesterdayZeroAgeFish = fishCountByAgeDictionary[0];
-                CycleOneDay(fishCountByAgeDictionary);
-                SpawnMoreFish(fishCountByAgeDictionary, yesterdayZeroAgeFish);
+                long yesterdayZeroAgeFish = fishCountByAgeArray[0];
+                CycleOneDay(fishCountByAgeArray);
+                SpawnMoreFish(fishCountByAgeArray, yesterdayZeroAgeFish);
             }
 
-            long fishCount = CountFishInDictionary(fishCountByAgeDictionary);
+            long fishCount = CountFishInArray(fishCountByAgeArray);
             Console.WriteLine(fishCount);
         }
 
@@ -66,43 +66,38 @@ namespace AoC2021Days
             }
         }
 
-        private static Dictionary<int, long> CreateDictionaryFromSchoolOfFish(List<int> schoolOfFish)
+        private static long[] CreateArrayFromSchoolOfFish(List<int> schoolOfFish)
         {
-            Dictionary<int, long> fishCountByAgeDictionary = new();
-            for (int i = 0; i < MaxAge + 1; i++)
-            {
-                fishCountByAgeDictionary.Add(i, 0);
-            }
+            long[] fishCountByAgeArray = new long[MaxAge + 1];
 
             foreach (var fish in schoolOfFish)
             {
-                fishCountByAgeDictionary[fish] += 1;
+                fishCountByAgeArray[fish] += 1;
             }
 
-            return fishCountByAgeDictionary;
+            return fishCountByAgeArray;
         }
 
-        private void CycleOneDay(Dictionary<int, long> fishCountByAgeDictionary)
+        private void CycleOneDay(long[] fishCountByAgeArray)
         {
-            long yesterdayZeroDayFish = fishCountByAgeDictionary[0];
+            long yesterdayZeroDayFish = fishCountByAgeArray[0];
             for (int i = 0; i < MaxAge; i++)
             {
-                fishCountByAgeDictionary[i] = fishCountByAgeDictionary[i + 1];
+                fishCountByAgeArray[i] = fishCountByAgeArray[i + 1];
             }
-            fishCountByAgeDictionary[6] += yesterdayZeroDayFish;
+            fishCountByAgeArray[6] += yesterdayZeroDayFish;
         }
 
-        private void SpawnMoreFish(Dictionary<int, long> fishCountByAgeDictionary, long numberOfFishToSpawn)
-            => fishCountByAgeDictionary[MaxAge] = numberOfFishToSpawn;
+        private void SpawnMoreFish(long[] fishCountByAgeArray, long numberOfFishToSpawn)
+            => fishCountByAgeArray[MaxAge] = numberOfFishToSpawn;
 
-        private static long CountFishInDictionary(Dictionary<int, long> fishCountByAgeDictionary)
+        private static long CountFishInArray(long[] fishCountByAgeArray)
         {
             long fishCount = 0;
-            foreach (var keyValuePair in fishCountByAgeDictionary)
+            foreach (var value in fishCountByAgeArray)
             {
-                fishCount += keyValuePair.Value;
+                fishCount += value;
             }
-
             return fishCount;
         }
     }
