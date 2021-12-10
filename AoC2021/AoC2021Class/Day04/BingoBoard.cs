@@ -2,7 +2,7 @@
 {
     public class BingoBoard
     {
-        private int boardSize;
+        private readonly int boardSize;
         private static int boardIdStatic = 0;
         public BingoBoard(string strBoard)
         {

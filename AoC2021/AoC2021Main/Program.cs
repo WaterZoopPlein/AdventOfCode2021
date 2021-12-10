@@ -5,9 +5,9 @@ namespace AoC2021Main
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            var day = new Day08(); // Replace date number here
+            var day = new Day09(); // Replace date number here
 
             Solve(day);
         }

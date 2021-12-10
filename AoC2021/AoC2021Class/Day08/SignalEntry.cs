@@ -2,7 +2,7 @@
 {
     public class SignalEntry
     {
-        private int[] segmentDisplayMap = {0b1110111, 0b0010010, 0b1011101, 0b1011011,
+        private readonly int[] segmentDisplayMap = {0b1110111, 0b0010010, 0b1011101, 0b1011011,
             0b0111010, 0b1101011, 0b1101111, 0b1010010, 0b1111111, 0b1111011};
         public SignalEntry(string strEntryLine)
         {
