@@ -1,3 +1,4 @@
+using AoC2021Core;
 using AoC2021Class.Day09;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace AoC2021Test.Day09
                 "8767896789",
                 "9899965678",
             };
-            testMap = MapUtility.ConvertInputStringListTo2DArray(stringMap);
+            testMap = ReadInput.ConvertInputStringListTo2DArray(stringMap);
         }
 
         [TestMethod]

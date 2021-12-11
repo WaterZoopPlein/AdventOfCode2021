@@ -80,5 +80,21 @@
                     yield return num;
             }
         }
+
+        public static int[,] ConvertInputStringListTo2DArray(List<string> input)
+        {
+            int[,] output2DArray = new int[input.Count, input[0].Length];
+            for (int lineNumber = 0; lineNumber < input.Count; lineNumber++)
+            {
+                string line = input[lineNumber];
+                for (int rowNumber = 0; rowNumber < line.Length; rowNumber++)
+                {
+                    char digitChar = line[rowNumber];
+                    output2DArray[lineNumber, rowNumber] = (int)char.GetNumericValue(digitChar);
+                }
+            }
+            return output2DArray;
+        }
+
     }
 }

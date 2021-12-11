@@ -7,7 +7,7 @@ namespace AoC2021Main
     {
         public static void Main()
         {
-            var day = new Day10(); // Replace date number here
+            var day = new Day11(); // Replace date number here
 
             Solve(day);
         }

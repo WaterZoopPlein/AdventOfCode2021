@@ -8,7 +8,7 @@ namespace AoC2021Days
         private static readonly List<string> InputList =
             ReadInput.ConvertInputTextToStringList(@"..\..\..\..\Inputs\Day09.txt", "\n");
         private static readonly int[,] ConvertedInput =
-            MapUtility.ConvertInputStringListTo2DArray(InputList);
+            ReadInput.ConvertInputStringListTo2DArray(InputList);
         private static readonly List<Tuple<int, int>> LowPointsList = new();
 
         public void SolvePartOne()
