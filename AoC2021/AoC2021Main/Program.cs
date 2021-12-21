@@ -7,7 +7,7 @@ namespace AoC2021Main
     {
         public static void Main()
         {
-            var day = new Day14(); // Replace date number here
+            var day = new Day20(); // Replace date number here
 
             Solve(day);
         }
@@ -15,10 +15,12 @@ namespace AoC2021Main
         private static void Solve(IDay day)
         {
             var watch1 = Stopwatch.StartNew();
+            Console.WriteLine("Part 1");
             day.SolvePartOne();
             watch1.Stop();
 
             var watch2 = Stopwatch.StartNew();
+            Console.WriteLine("Part 2");
             day.SolvePartTwo();
             watch2.Stop();
 
